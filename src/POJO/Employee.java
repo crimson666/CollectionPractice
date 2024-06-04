@@ -2,12 +2,12 @@ package POJO;
 
 import java.util.Objects;
 
-public class Employee {
-    int id;
-    String name;
-    String email;
-    int salary;
-    long phone;
+public class Employee implements Comparable<Employee>{
+    public int id;
+    public String name;
+    public String email;
+    public int salary;
+    public long phone;
     public Employee(int id, String name, String email, int salary, long phone) {
         this.id = id;
         this.name = name;
@@ -37,5 +37,12 @@ public class Employee {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.id - o.id;
+//        return this.name.compareTo(o.name); // for String Stuff
+
     }
 }

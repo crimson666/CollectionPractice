@@ -12,6 +12,9 @@ public class Main {
         ArrayDwdue2 ObjArrayDeque = new ArrayDwdue2();
         HashSet2 ObjHashSet = new HashSet2();
         SetAdvance objSetA = new SetAdvance();
-        objSetA.execute();
+        TreeAdvance2 ObjTreeMap = new TreeAdvance2();
+        ArrayAdvance objArray = new ArrayAdvance();
+        collectionClass objCollection = new collectionClass();
+        objCollection.execute();
     }
 }
