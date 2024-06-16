@@ -92,7 +92,23 @@ public class Main2 {
 
 //        ***Finding Department with the Highest Number of Employees
 
-        Map.Entry<String,Long> Data = empList.stream().collect(Collectors.groupingBy(EmployeeAdvance::getDeptName,Collectors.counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get();
-        System.out.println(Data.getValue());
+//        Map.Entry<String,Long> Data = empList.stream().collect(Collectors.groupingBy(EmployeeAdvance::getDeptName,Collectors.counting())).entrySet().stream().max(Map.Entry.comparingByValue()).get();
+//        System.out.println(Data.getValue());
+
+//        ***Sorting Employees by Name and Age
+//        Comparator<EmployeeAdvance> comparator1 = Comparator.comparing(EmployeeAdvance::getName);
+//        Comparator<EmployeeAdvance> comparator2 = Comparator.comparingInt(EmployeeAdvance::getAge);
+//        empList.stream().sorted(comparator1.thenComparing(comparator2)).forEach(System.out::println);
+//
+//        ***Finding the Highest Experienced Employee
+//        String employee = empList.stream().sorted(Comparator.comparingLong(EmployeeAdvance::getYearOfJoining)).findFirst().get().toString();
+//        System.out.println(employee);
+
+//        ***Printing Average and Total Salary of the Organization
+//        DoubleSummaryStatistics empSalary = empList.stream().collect(Collectors.summarizingDouble(EmployeeAdvance::getSalary));
+//        System.out.println(empSalary);
+
+//        ***Printing Average Salary of Each Department
+
     }
 }
