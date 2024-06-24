@@ -1,6 +1,6 @@
 package POJO;
 
-public class EmployeeAdvance {
+public class EmployeeAdvance implements Comparable<EmployeeAdvance> {
     private int id;
     private String name;
     private int age;
@@ -9,8 +9,9 @@ public class EmployeeAdvance {
     private String deptName;
     private String city;
     private int yearOfJoining;
+
     public EmployeeAdvance(int id, String name, int age, long salary, String gender,
-                    String deptName, String city, int yearOfJoining) {
+                           String deptName, String city, int yearOfJoining) {
         this.id = id;
         this.name = name;
         this.age = age;
@@ -20,6 +21,7 @@ public class EmployeeAdvance {
         this.city = city;
         this.yearOfJoining = yearOfJoining;
     }
+
     // Getters and setters omitted for brevity
     @Override
     public String toString() {
@@ -97,5 +99,14 @@ public class EmployeeAdvance {
 
     public void setYearOfJoining(int yearOfJoining) {
         this.yearOfJoining = yearOfJoining;
+    }
+
+    public int compareTo(EmployeeAdvance o1) {
+        if (this.getAge() > o1.getAge()) {
+            return 1;
+        } else {
+            return -1;
+        }
+
     }
 }
