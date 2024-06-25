@@ -35,7 +35,10 @@ public class Main {
 //        Main CusObj = new Main();
 //        Method getMethod = CusObj.getClass().getMethod("RanDomMethod");
 //        CustomAnnotation newCustomAnnotation = getMethod.getAnnotation(CustomAnnotation.class);
-//        System.out.println("Annotation Value is " + newCustomAnnotation.value());
+//        CustomAnnotation newCus = CusObj.getClass().getMethod("RanDomMethod").getAnnotation(CustomAnnotation.class);
+//        System.out.println("Annotation Value is " + newCustomAnnotation.value() + " And " + newCus.value());
+
+
 
 
     }
