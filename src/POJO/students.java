@@ -3,11 +3,12 @@ package POJO;
 import java.io.Serializable;
 
 public class students implements Serializable {
-    public students(String name, Integer standard, int age, long phoneNo) {
+    public students(String name, Integer standard, int age, long phoneNo,int secreatNo) {
         this.name = name;
         this.standard = standard;
         this.age = age;
         this.phoneNo = phoneNo;
+        this.secreatNo = secreatNo;
     }
 
     private static final long serialVersionId = 1L;
@@ -16,6 +17,17 @@ public class students implements Serializable {
 
     private int age;
     private long phoneNo;
+
+    //transient will not allow it to be serialized , it will not be written in a file.
+    transient int secreatNo;
+
+    public int getSecreatNo() {
+        return secreatNo;
+    }
+
+    public void setSecreatNo(int secreatNo) {
+        this.secreatNo = secreatNo;
+    }
 
     public String getName() {
         return name;
@@ -56,6 +68,7 @@ public class students implements Serializable {
                 ", Standerd='" + standard + '\'' +
                 ", age='" + age + '\'' +
                 ", phoneNo=" + phoneNo +
+                ", secreatN0=" + secreatNo +
                 '}';
     }
 }

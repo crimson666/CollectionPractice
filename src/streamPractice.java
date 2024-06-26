@@ -1,10 +1,8 @@
-import POJO.Employee;
 import POJO.EmployeeAdvance;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
-public class Main2 {
+public class streamPractice {
     public static void main(String[] args) {
         List<EmployeeAdvance> empList = new ArrayList<>();
         empList.add(new EmployeeAdvance(1, "abc", 28, 123, "F", "HR", "Blore", 2020));

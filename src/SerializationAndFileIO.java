@@ -4,8 +4,8 @@ import java.io.*;
 
 public class SerializationAndFileIO {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        students student1 = new students("Ankur",2,18,23432423);
-
+        students student1 = new students("Ankur",2,18,23432423,234);
+        System.out.println("students " + student1.toString());
         String Filename = "objStudent.txt";
         File file = new File(Filename);
         //Writing on a file : Serialization
